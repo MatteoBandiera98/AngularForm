@@ -1,0 +1,57 @@
+<div class="container">
+  <h2 class="mb-4">Registrazione</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" formControlName="nome" class="form-control" required>
+        <div class="invalid-feedback">Campo nome obbligatorio.</div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" formControlName="cognome" class="form-control" required>
+        <div class="invalid-feedback">Campo cognome obbligatorio.</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" class="form-control" required>
+      <div class="invalid-feedback">Campo password obbligatorio.</div>
+    </div>
+    <div class="mb-3">
+      <label for="confermaPassword">Conferma Password</label>
+      <input type="password" id="confermaPassword" formControlName="confermaPassword" class="form-control" required>
+      <div class="invalid-feedback">Campo conferma password obbligatorio.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="genere">Genere</label>
+      <select id="genere" formControlName="genere" class="form-control" required>
+        <option value="maschio">Maschio</option>
+        <option value="femmina">Femmina</option>
+        <option value="altro">Altro</option>
+      </select>
+      <div class="invalid-feedback">Campo genere obbligatorio.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="biografia">Biografia</label>
+      <textarea id="biografia" formControlName="biografia" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="username">Username</label>
+      <input type="text" id="username" formControlName="username" class="form-control" required>
+      <div class="invalid-feedback">Campo username obbligatorio.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" class="form-control" required>
+      <div class="invalid-feedback">Campo email obbligatorio.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrati</button>
+  </form>
+</div>
